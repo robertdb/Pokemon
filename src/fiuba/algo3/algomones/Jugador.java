@@ -6,16 +6,29 @@ import java.util.Set;
 
 import fiuba.algo3.algomones.elementos.Elemento;
 import fiuba.algo3.algomones.elementos.TipoElemento;
+import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
+import fiuba.algo3.algomones.excepciones.NoSePuedenIngresarMasAlgomonesError;
 
 public class Jugador {
+	
 	EnumMap<EspecieAlgomon, Algomon> algomones;
+	
 	EnumMap<TipoElemento,Elemento> elementos;
+	
 	private Algomon algomonActual;
+	
+	private final int cantidadDeAlgomonesMaxima;
 
 	public Jugador() {
+		
 		algomones = new EnumMap<EspecieAlgomon,Algomon >(EspecieAlgomon.class);
+		
 		elementos = cargarElementos();
+		
 		algomonActual = null;
+		
+		cantidadDeAlgomonesMaxima = 3;
+		
 	}
 
 	private EnumMap<TipoElemento, Elemento> cargarElementos() {
@@ -61,6 +74,10 @@ public class Jugador {
 	}
 
 	public void ingresarAlgomon(EspecieAlgomon nombreAlgomon, Algomon algomon) {
+		
+		if(algomones.size() == cantidadDeAlgomonesMaxima )
+			throw new NoSePuedenIngresarMasAlgomonesError();
+		
 		if (algomones.isEmpty()){
 			algomonActual = algomon;
 		}
