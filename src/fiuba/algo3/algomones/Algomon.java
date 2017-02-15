@@ -77,6 +77,8 @@ public class Algomon {
 
 	public void aumentarAtaques() {
 		
+		estado.aplicarEfectos(this);
+		
 		for (Ataque ataque : this.ataques.values()) {
 		    
 			ataque.aumentarAtaques();
@@ -85,15 +87,17 @@ public class Algomon {
 		
 	}
 
-	public void aplicarElementoAlaSalud(int aumentoDeVida) {
-		
-		this.aumentoDeSalud(aumentoDeVida);
-		
-	}
-
 	public void aplicarRestaurador() {
 		
 		this.estado.aplicarNormalizador(this);
+		
+	}
+	
+	public void aplicarElementoAlaSalud(int aumentoDeVida) {
+		
+		estado.aplicarEfectos(this);
+		
+		this.aumentoDeSalud(aumentoDeVida);
 		
 	}
 

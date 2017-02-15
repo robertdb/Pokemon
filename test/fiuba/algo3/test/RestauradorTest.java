@@ -53,6 +53,7 @@ public class RestauradorTest {
 		Elemento restaurador = new Restaurador();
 		
 		restaurador.aplicarElemento(blastoise);
+		assertEquals(319,blastoise.salud(),0.001D);
 		
 		// blastoise se quema por ultima vez al aplicarse el restaurador.
 		blastoise.atacar(charizard, NombreDelAtaque.ATAQUE_RAPIDO);
@@ -87,6 +88,17 @@ public class RestauradorTest {
 		
 		}catch(AtacarDormidoNoPuedeRealizarseException exception){}
 		
+		try{
+			
+			blastoise.atacar(chansey, NombreDelAtaque.ATAQUE_RAPIDO);
+		
+		}catch(AtacarDormidoNoPuedeRealizarseException exception){}
+		
+		try{
+			
+			blastoise.atacar(chansey, NombreDelAtaque.ATAQUE_RAPIDO);
+		
+		}catch(AtacarDormidoNoPuedeRealizarseException exception){}
 		assertEquals(400,chansey.salud(),0.001D);
 		
 		Elemento restaurador = new Restaurador();

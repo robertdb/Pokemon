@@ -23,13 +23,13 @@ public class Pocion implements Elemento {
 		if(pocionesAgotadas())
 			throw new PocionAgotadaException();
 		
-		algomon.aplicarElementoAlaSalud(aumentoDeVida);
+		algomon.aumentoDeSalud(aumentoDeVida);
 		
-		posionesRestantes -= 1;
+		posionesRestantes --;
 		
 	}
 
-	private boolean pocionesAgotadas() {
+	public boolean pocionesAgotadas() {
 		
 		return posionesRestantes == 0;
 	}

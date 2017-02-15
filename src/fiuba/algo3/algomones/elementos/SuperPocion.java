@@ -18,6 +18,7 @@ public class SuperPocion implements Elemento {
 	@Override
 	public void aplicarElemento(Algomon algomon) {
 		
+		
 		try{
 			this.pocionSimple.aplicarElemento(algomon);
 			this.pocionSimple.aplicarElemento(algomon);
