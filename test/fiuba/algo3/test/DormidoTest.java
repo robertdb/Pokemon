@@ -6,13 +6,13 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Dormido;
-import fiuba.algo3.algomones.Efecto;
-import fiuba.algo3.algomones.Quemado;
 import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.Tipo;
-import fiuba.algo3.algomones.TipoPlanta;
+import fiuba.algo3.algomones.estadosDeAlgomon.Dormido;
+import fiuba.algo3.algomones.estadosDeAlgomon.Efecto;
+import fiuba.algo3.algomones.estadosDeAlgomon.Quemado;
 import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
+import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
 
 public class DormidoTest {
 

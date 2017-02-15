@@ -1,6 +1,17 @@
 package fiuba.algo3.algomones;
 import java.util.EnumMap;
 
+import fiuba.algo3.algomones.ataques.Ataque;
+import fiuba.algo3.algomones.ataques.AtaqueCanto;
+import fiuba.algo3.algomones.ataques.AtaqueChupavidas;
+import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
+import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
+
 public enum EspecieAlgomon {
 	
 	CHARMANDER
@@ -11,7 +22,7 @@ public enum EspecieAlgomon {
 			int potenciaFogonazo = 2;
 			int cantidadMaximaDeAtaquesFogonazo = 4;
 			Tipo tipoFuego1 = new TipoFuego();
-			Ataque fogonazo = new AtaqueFogonazo(tipoFuego1, potenciaFogonazo, cantidadMaximaDeAtaquesFogonazo);
+			Ataque fogonazo = new AtaqueFogonazo(new AtaqueSimple(tipoFuego1, potenciaFogonazo , cantidadMaximaDeAtaquesFogonazo));
 			
 			int potenciaBrasas = 16;
 			int cantidadMaximaDeAtaquesBrasas = 10;
@@ -75,7 +86,7 @@ public enum EspecieAlgomon {
 			int potenciaChupavidas = 15;
 			int cantidadMaximaDeAtaquesChupavidas = 8;
 			Tipo tipoPlanta1 = new TipoPlanta();
-			Ataque chupavidas = new AtaqueChupavidas(tipoPlanta1, potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas);
+			Ataque chupavidas = new AtaqueChupavidas(new AtaqueSimple(tipoPlanta1, potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas));
 			
 			int potenciaLatigoCepa = 15;
 			int cantidadMaximaDeAtaquesLatigoCepa = 10;
@@ -107,7 +118,7 @@ public enum EspecieAlgomon {
 			int potenciaCanto = 0;
 			int cantidadMaximaDeAtaquesCanto = 6;
 			Tipo tipoNormal1 = new TipoNormal();
-			Ataque canto = new AtaqueCanto(tipoNormal1, potenciaCanto, cantidadMaximaDeAtaquesCanto);
+			Ataque canto = new AtaqueCanto(new AtaqueSimple(tipoNormal1, potenciaCanto, cantidadMaximaDeAtaquesCanto));
 			
 			int potenciaLatigoCepa = 15;
 			int cantidadMaximaDeAtaquesLatigoCepa = 10;
@@ -139,7 +150,7 @@ public enum EspecieAlgomon {
 			int potenciaFogonazo = 2;
 			int cantidadMaximaDeAtaquesFogonazo = 4;
 			Tipo tipoFuego = new TipoFuego();
-			Ataque fogonazo = new AtaqueFogonazo(tipoFuego, potenciaFogonazo, cantidadMaximaDeAtaquesFogonazo);
+			Ataque fogonazo = new AtaqueFogonazo(new AtaqueSimple(tipoFuego, potenciaFogonazo, cantidadMaximaDeAtaquesFogonazo));
 			
 			int potenciaBurbuja = 10;
 			int cantidadMaximaDeAtaquesBurbuja = 15;
@@ -172,7 +183,7 @@ public enum EspecieAlgomon {
 			int potenciaCanto = 0;
 			int cantidadMaximaDeAtaquesCanto = 6;
 			Tipo tipoNormal1 = new TipoNormal();
-			Ataque canto = new AtaqueCanto(tipoNormal1, potenciaCanto, cantidadMaximaDeAtaquesCanto);
+			Ataque canto = new AtaqueCanto(new AtaqueSimple(tipoNormal1, potenciaCanto, cantidadMaximaDeAtaquesCanto));
 			
 			int potenciaBurbuja = 10;
 			int cantidadMaximaDeAtaquesBurbuja = 15;

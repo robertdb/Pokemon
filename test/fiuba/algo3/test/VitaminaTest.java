@@ -7,19 +7,19 @@ import java.util.EnumMap;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Ataque;
-import fiuba.algo3.algomones.AtaqueFogonazo;
-import fiuba.algo3.algomones.AtaqueSimple;
-import fiuba.algo3.algomones.Elemento;
 import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.SuperPocion;
-import fiuba.algo3.algomones.TipoAgua;
-import fiuba.algo3.algomones.TipoFuego;
-import fiuba.algo3.algomones.TipoNormal;
-import fiuba.algo3.algomones.Vitamina;
+import fiuba.algo3.algomones.ataques.Ataque;
+import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
+import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.elementos.Elemento;
+import fiuba.algo3.algomones.elementos.SuperPocion;
+import fiuba.algo3.algomones.elementos.Vitamina;
 import fiuba.algo3.algomones.excepciones.CantidadDeAtaquesAgotadosException;
 import fiuba.algo3.algomones.excepciones.VitaminaAgotadaException;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
 
 public class VitaminaTest {
 
@@ -54,7 +54,7 @@ public class VitaminaTest {
 		// Se crea un algomon personalizado con fogonazo.
 		// El algomon tiene 2 ataques disponibles.
 		int cantidadDeAtaques = 2;
-		Ataque fogonazo = new AtaqueFogonazo(new TipoFuego(), 2, cantidadDeAtaques);
+		Ataque fogonazo = new AtaqueFogonazo(new AtaqueSimple(new TipoFuego(), 2, cantidadDeAtaques));
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.FOGONAZO,fogonazo);
 		Algomon charizard = new Algomon("Charizard", new TipoFuego(), ataques , new Salud(400));
@@ -89,7 +89,8 @@ public class VitaminaTest {
 		// Se crea un algomon personalizado con fogonazo.
 		// El algomon tiene 2 ataques disponibles.
 		int cantidadDeAtaques = 2;
-		Ataque fogonazo = new AtaqueFogonazo(new TipoFuego(), 2, cantidadDeAtaques);
+
+		Ataque fogonazo = new AtaqueFogonazo(new AtaqueSimple(new TipoFuego(), 2, cantidadDeAtaques ));
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.FOGONAZO,fogonazo);
 		Algomon charizard = new Algomon("Charizard", new TipoFuego(), ataques , new Salud(400));

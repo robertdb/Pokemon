@@ -4,6 +4,9 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Set;
 
+import fiuba.algo3.algomones.elementos.Elemento;
+import fiuba.algo3.algomones.elementos.TipoElemento;
+
 public class Jugador {
 	EnumMap<EspecieAlgomon, Algomon> algomones;
 	EnumMap<TipoElemento,Elemento> elementos;
@@ -11,11 +14,11 @@ public class Jugador {
 
 	public Jugador() {
 		algomones = new EnumMap<EspecieAlgomon,Algomon >(EspecieAlgomon.class);
-		elementos = crearHashMap();
+		elementos = cargarElementos();
 		algomonActual = null;
 	}
 
-	private EnumMap<TipoElemento, Elemento> crearHashMap() {
+	private EnumMap<TipoElemento, Elemento> cargarElementos() {
 		EnumMap<TipoElemento,Elemento> elementos = new EnumMap<TipoElemento,Elemento>(TipoElemento.class);
 		
 		elementos.put(TipoElemento.POCION, TipoElemento.POCION.nuevo());

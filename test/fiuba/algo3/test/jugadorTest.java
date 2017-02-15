@@ -10,11 +10,11 @@ import java.util.Set;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Elemento;
 import fiuba.algo3.algomones.EspecieAlgomon;
 import fiuba.algo3.algomones.Jugador;
 import fiuba.algo3.algomones.NombreDelAtaque;
-import fiuba.algo3.algomones.TipoElemento;
+import fiuba.algo3.algomones.elementos.Elemento;
+import fiuba.algo3.algomones.elementos.TipoElemento;
 
 public class jugadorTest {
 

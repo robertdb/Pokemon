@@ -7,16 +7,16 @@ import java.util.EnumMap;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Ataque;
-import fiuba.algo3.algomones.AtaqueChupavidas;
-import fiuba.algo3.algomones.AtaqueSimple;
 import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.Tipo;
-import fiuba.algo3.algomones.TipoAgua;
-import fiuba.algo3.algomones.TipoFuego;
-import fiuba.algo3.algomones.TipoNormal;
-import fiuba.algo3.algomones.TipoPlanta;
+import fiuba.algo3.algomones.ataques.Ataque;
+import fiuba.algo3.algomones.ataques.AtaqueChupavidas;
+import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
 
 public class AtaqueChupavidasTest {
 
@@ -26,7 +26,7 @@ public class AtaqueChupavidasTest {
 		// Se crea un algomon personalizado.
 		int potenciaChupavidas = 15;
 		int cantidadMaximaDeAtaquesChupavidas = 50;
-		Ataque chupavidas = new AtaqueChupavidas(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas );
+		Ataque chupavidas = new AtaqueChupavidas(new AtaqueSimple(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas ));
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.CHUPAVIDAS, chupavidas);
 		
@@ -65,7 +65,7 @@ public class AtaqueChupavidasTest {
 		// Se crea un algomon personalizado.
 		int potenciaChupavidas = 15;
 		int cantidadMaximaDeAtaquesChupavidas = 50;
-		Ataque chupavidas = new AtaqueChupavidas(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas );
+		Ataque chupavidas = new AtaqueChupavidas(new AtaqueSimple(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas ));
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.CHUPAVIDAS, chupavidas);
 		
@@ -105,7 +105,7 @@ public class AtaqueChupavidasTest {
 		// Se crea un algomon personalizado.
 		int potenciaChupavidas = 15;
 		int cantidadMaximaDeAtaquesChupavidas = 50;
-		Ataque chupavidas = new AtaqueChupavidas(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas );
+		Ataque chupavidas = new AtaqueChupavidas(new AtaqueSimple(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas) );
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.CHUPAVIDAS, chupavidas);
 		Salud salud = new Salud(400);
@@ -145,7 +145,7 @@ public class AtaqueChupavidasTest {
 		// Se crea un algomon personalizado.
 		int potenciaChupavidas = 15;
 		int cantidadMaximaDeAtaquesChupavidas = 50;
-		Ataque chupavidas = new AtaqueChupavidas(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas );
+		Ataque chupavidas = new AtaqueChupavidas(new AtaqueSimple(new TipoPlanta(), potenciaChupavidas, cantidadMaximaDeAtaquesChupavidas) );
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.CHUPAVIDAS, chupavidas);
 		Salud salud = new Salud(400);

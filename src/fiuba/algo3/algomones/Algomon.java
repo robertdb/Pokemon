@@ -4,7 +4,11 @@ import java.util.EnumMap;
 import java.util.List;
 import java.util.Set;
 
+import fiuba.algo3.algomones.ataques.Ataque;
+import fiuba.algo3.algomones.estadosDeAlgomon.ContextoEstado;
+import fiuba.algo3.algomones.estadosDeAlgomon.Efecto;
 import fiuba.algo3.algomones.excepciones.AtaqueNoPertenecienteAalgomonException;
+import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
 
 public class Algomon {
 
