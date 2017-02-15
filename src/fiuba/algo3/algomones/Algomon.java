@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.Set;
 
 import fiuba.algo3.algomones.ataques.Ataque;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.estadosDeAlgomon.ContextoEstado;
 import fiuba.algo3.algomones.estadosDeAlgomon.Efecto;
-import fiuba.algo3.algomones.excepciones.AtaqueNoPertenecienteAalgomonException;
+import fiuba.algo3.algomones.excepciones.AtaqueNoPertenecienteAAlgomonException;
 import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
 
 public class Algomon {
@@ -35,7 +36,7 @@ public class Algomon {
 		Ataque ataque = this.ataques.get(nombreDelAtaque);
 		 
 		if( ataque == null)
-			throw new AtaqueNoPertenecienteAalgomonException();
+			throw new AtaqueNoPertenecienteAAlgomonException();
 	
 		return ataque.atacar(this, atacado);
 		 
@@ -104,6 +105,12 @@ public class Algomon {
 	public Set<NombreDelAtaque> getAtaques() {
 		// TODO Auto-generated method stub
 		return ataques.keySet();
+	}
+
+	public boolean estaMuerto() {
+		
+		return this.salud.terminada();
+		
 	}
 
 }

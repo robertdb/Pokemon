@@ -7,11 +7,11 @@ import java.util.EnumMap;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
 import fiuba.algo3.algomones.ataques.Ataque;
 import fiuba.algo3.algomones.ataques.AtaqueCanto;
 import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
 import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
 import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;

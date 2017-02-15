@@ -29,5 +29,10 @@ public class Restaurador implements Elemento {
 		return restauradoresRestantes == 0;
 		
 	}
+	@Override
+	public boolean elementoCaducado() {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
 }

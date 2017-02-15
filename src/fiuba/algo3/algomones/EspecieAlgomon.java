@@ -6,6 +6,7 @@ import fiuba.algo3.algomones.ataques.AtaqueCanto;
 import fiuba.algo3.algomones.ataques.AtaqueChupavidas;
 import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
 import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
 import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
 import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;

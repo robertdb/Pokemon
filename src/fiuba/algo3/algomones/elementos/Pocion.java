@@ -34,4 +34,10 @@ public class Pocion implements Elemento {
 		return posionesRestantes == 0;
 	}
 
+	@Override
+	public boolean elementoCaducado() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

@@ -11,64 +11,89 @@ import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
 import fiuba.algo3.algomones.EspecieAlgomon;
-import fiuba.algo3.algomones.Jugador;
-import fiuba.algo3.algomones.NombreDelAtaque;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.elementos.Elemento;
 import fiuba.algo3.algomones.elementos.TipoElemento;
+import fiuba.algo3.algomones.excepciones.CantidadDeAtaquesAgotadosException;
+import fiuba.algo3.algomones.excepciones.JugadorNoTieneUnAlgomonParaJugarError;
+import fiuba.algo3.algomones.excepciones.NoSePuedeAplicarUnElementoSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.algomones.excepciones.NoSePuedeAtacarConAlgomonSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.algomones.excepciones.NoSePuedeCambiarAlAlgomonSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.algomones.excepciones.NoSePuedenIngresarMasAlgomonesError;
+import fiuba.algo3.algomones.jugadores.Jugador;
+import fiuba.algo3.algomones.jugadores.JugadorPasivo;
 
 public class jugadorTest {
 
-	@Test
-	public void testJugadorInicialConalgomones() {
+	
+	@Test(expected = NoSePuedenIngresarMasAlgomonesError.class)
+	public void testJugadorNoPuedeTenerAlgomones() {
 		
-		Algomon rattata = EspecieAlgomon.RATTATA.nuevo();
-		Algomon charmander = EspecieAlgomon.CHARMANDER.nuevo();
-		Algomon bulbasour = EspecieAlgomon.BULBASOUR.nuevo();
+		Jugador jugador = new Jugador("pepe");
 		
+		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA);
+		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
+		jugador.ingresarAlgomon(EspecieAlgomon.CHANSEY);
 		
-		Jugador jugador = new Jugador();
-		
-		assertEquals(null,jugador.statusAlgomonActual());
-		
-		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA,rattata);
-		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER,charmander);
-		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR,bulbasour);
-		
-		assertEquals(rattata,jugador.statusAlgomonActual());
-		
-		jugador.elegirAlgomon(EspecieAlgomon.CHARMANDER);
-		
-		assertEquals(charmander,jugador.statusAlgomonActual());
-		
-		
-		jugador.elegirAlgomon(EspecieAlgomon.BULBASOUR);
-		
-		assertEquals(bulbasour,jugador.statusAlgomonActual());
-		
-		Set<EspecieAlgomon> listaElementos = jugador.getAlgomones(); 
-		assertTrue(listaElementos.size() == 3);
-		
-		
+		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER);
+			
 	}
-	@Test
-	public void testJugadorDevuelveElementos(){ 
+	
+	@Test(expected = NoSePuedeCambiarAlAlgomonSiNoEsElTurnoDelJugadorError.class)
+	public void testNoSePuedeCambiarAlAlgomonSiNoEsElTurnoDelJugadorError() {
+			
+		Jugador jugador = new Jugador("pepe");
 		
+		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA);
+		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		
-		Jugador jugador = new Jugador();
-		Set<TipoElemento> listaElementos = jugador.getElementos(); 
-		assertTrue(listaElementos.size() == 4);
+		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER);
+				
 	}
-	@Test
-	public void testJugadorDevuelveLosAtaqueDelAlgomonActual(){
-		Algomon rattata = EspecieAlgomon.RATTATA.nuevo();
+	
+	@Test(expected = NoSePuedeAtacarConAlgomonSiNoEsElTurnoDelJugadorError.class)
+	public void testNoSePuedeAtacarConAlgomonSiNoEsElTurnoDelJugadorError() {
+			
+		Jugador jugador = new Jugador("pepe");
 		
-		Jugador jugador = new Jugador();
+		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA);
+		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		
-		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA, rattata);
-		
-		Set<NombreDelAtaque> listaAtaques = jugador.getAtaqueAlgomon();
-		
-		assertTrue(listaAtaques.size() == 3);
+		jugador.atacarConAlgomonActivo(NombreDelAtaque.ATAQUE_RAPIDO, new Jugador("juan"));
+				
 	}
+	
+	@Test(expected = NoSePuedeAplicarUnElementoSiNoEsElTurnoDelJugadorError.class)
+	public void testNoSePuedeAplicarUnElementoSiNoEsElTurnoDelJugadorError() {
+			
+		Jugador jugador = new Jugador("pepe");
+		
+		jugador.ingresarAlgomon(EspecieAlgomon.RATTATA);
+		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
+		
+		jugador.aplicarElemento(TipoElemento.SUPERPOCION);
+				
+	}
+	
+	@Test(expected = JugadorNoTieneUnAlgomonParaJugarError .class)
+	public void testJugadorNoTieneUnAlgomonParaJugarError () {
+			
+		Jugador jugador = new Jugador("pepe");
+		
+		jugador.esSuTurno();
+		
+		jugador.aplicarElemento(TipoElemento.SUPERPOCION);
+				
+	}
+	
+	
+	
+	
+	
+	
 
 }

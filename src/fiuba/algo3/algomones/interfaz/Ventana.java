@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
-import fiuba.algo3.algomones.Jugador;
+import fiuba.algo3.algomones.jugadores.Jugador;
 
 public class Ventana extends JFrame{
 	

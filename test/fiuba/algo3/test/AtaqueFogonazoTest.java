@@ -8,13 +8,13 @@ import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
 import fiuba.algo3.algomones.EspecieAlgomon;
-import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
 import fiuba.algo3.algomones.ataques.Ataque;
 import fiuba.algo3.algomones.ataques.AtaqueCanto;
 import fiuba.algo3.algomones.ataques.AtaqueChupavidas;
 import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
 import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
 import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
 import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;

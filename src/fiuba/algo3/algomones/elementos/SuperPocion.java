@@ -31,6 +31,12 @@ public class SuperPocion implements Elemento {
 			
 	}
 
+	@Override
+	public boolean elementoCaducado() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
 
 

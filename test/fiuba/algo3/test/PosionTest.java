@@ -8,10 +8,10 @@ import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
 import fiuba.algo3.algomones.EspecieAlgomon;
-import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
 import fiuba.algo3.algomones.ataques.Ataque;
 import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.elementos.Elemento;
 import fiuba.algo3.algomones.elementos.Pocion;
 import fiuba.algo3.algomones.excepciones.CantidadDeAtaquesAgotadosException;

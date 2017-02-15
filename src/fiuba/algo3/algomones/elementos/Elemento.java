@@ -4,6 +4,9 @@ import fiuba.algo3.algomones.Algomon;
 
 public interface Elemento {
 
-	void aplicarElemento(Algomon algomon);
+	public void aplicarElemento(Algomon algomon);
+	
+	// codear.
+	public boolean elementoCaducado();
 	
 }

@@ -6,9 +6,9 @@ import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
 import fiuba.algo3.algomones.EspecieAlgomon;
-import fiuba.algo3.algomones.NombreDelAtaque;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
-import fiuba.algo3.algomones.excepciones.AtaqueNoPertenecienteAalgomonException;
+import fiuba.algo3.algomones.excepciones.AtaqueNoPertenecienteAAlgomonException;
 import fiuba.algo3.algomones.excepciones.CantidadDeAtaquesAgotadosException;
 
 public class AlgomonTest {
@@ -304,7 +304,7 @@ public class AlgomonTest {
 	
 	
 	
-	@Test(expected = AtaqueNoPertenecienteAalgomonException.class)
+	@Test(expected = AtaqueNoPertenecienteAAlgomonException.class)
 	public void testAlgomonNoPuedeAtacarSiNotieneEseAtaque(){
 		
 		Algomon bulbasaur = EspecieAlgomon.BULBASOUR.nuevo();

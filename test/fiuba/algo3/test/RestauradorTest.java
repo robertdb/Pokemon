@@ -7,12 +7,12 @@ import java.util.EnumMap;
 import org.junit.Test;
 
 import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.NombreDelAtaque;
 import fiuba.algo3.algomones.Salud;
 import fiuba.algo3.algomones.ataques.Ataque;
 import fiuba.algo3.algomones.ataques.AtaqueCanto;
 import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
 import fiuba.algo3.algomones.ataques.AtaqueSimple;
+import fiuba.algo3.algomones.ataques.NombreDelAtaque;
 import fiuba.algo3.algomones.elementos.Elemento;
 import fiuba.algo3.algomones.elementos.Restaurador;
 import fiuba.algo3.algomones.elementos.Vitamina;

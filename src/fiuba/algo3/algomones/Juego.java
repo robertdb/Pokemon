@@ -2,14 +2,15 @@ package fiuba.algo3.algomones;
 
 import fiuba.algo3.algomones.excepciones.AlgomonesDeJugadorMuertosExeption;
 import fiuba.algo3.algomones.interfaz.Ventana;
+import fiuba.algo3.algomones.jugadores.Jugador;
 
 public class Juego {
 	private Jugador activo;
 	private Jugador pasivo;
 
 	public Juego() {
-		activo = new Jugador();
-		pasivo = new Jugador();
+		activo = new Jugador("pepe");
+		pasivo = new Jugador("pepa");
 	}
 	public void siguienteTruno() {
 		Jugador aux = activo;
