@@ -6,21 +6,21 @@ import java.util.EnumMap;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.ataques.Ataque;
-import fiuba.algo3.algomones.ataques.AtaqueCanto;
-import fiuba.algo3.algomones.ataques.AtaqueFogonazo;
-import fiuba.algo3.algomones.ataques.AtaqueSimple;
-import fiuba.algo3.algomones.ataques.NombreDelAtaque;
-import fiuba.algo3.algomones.elementos.Elemento;
-import fiuba.algo3.algomones.elementos.Restaurador;
-import fiuba.algo3.algomones.elementos.Vitamina;
-import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
-import fiuba.algo3.algomones.excepciones.RestauradorAgotadoException;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.Salud;
+import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaqueCanto;
+import fiuba.algo3.modelo.ataques.AtaqueFogonazo;
+import fiuba.algo3.modelo.ataques.AtaqueSimple;
+import fiuba.algo3.modelo.ataques.NombreDelAtaque;
+import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.elementos.Restaurador;
+import fiuba.algo3.modelo.elementos.Vitamina;
+import fiuba.algo3.modelo.excepciones.AtacarDormidoNoPuedeRealizarseException;
+import fiuba.algo3.modelo.excepciones.RestauradorAgotadoException;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoNormal;
 
 public class RestauradorTest {
 

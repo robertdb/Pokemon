@@ -4,11 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
+import fiuba.algo3.modelo.tiposDeAlgomon.Tipo;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoPlanta;
 
 public class TipoTest {
 

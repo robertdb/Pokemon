@@ -9,19 +9,20 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.EspecieAlgomon;
-import fiuba.algo3.algomones.ataques.NombreDelAtaque;
-import fiuba.algo3.algomones.elementos.Elemento;
-import fiuba.algo3.algomones.elementos.TipoElemento;
-import fiuba.algo3.algomones.excepciones.CantidadDeAtaquesAgotadosException;
-import fiuba.algo3.algomones.excepciones.JugadorNoTieneUnAlgomonParaJugarError;
-import fiuba.algo3.algomones.excepciones.NoSePuedeAplicarUnElementoSiNoEsElTurnoDelJugadorError;
-import fiuba.algo3.algomones.excepciones.NoSePuedeAtacarConAlgomonSiNoEsElTurnoDelJugadorError;
-import fiuba.algo3.algomones.excepciones.NoSePuedeCambiarAlAlgomonSiNoEsElTurnoDelJugadorError;
-import fiuba.algo3.algomones.excepciones.NoSePuedenIngresarMasAlgomonesError;
-import fiuba.algo3.algomones.jugadores.Jugador;
-import fiuba.algo3.algomones.jugadores.JugadorPasivo;
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.EspecieAlgomon;
+import fiuba.algo3.modelo.Juego;
+import fiuba.algo3.modelo.ataques.NombreDelAtaque;
+import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.elementos.TipoElemento;
+import fiuba.algo3.modelo.excepciones.CantidadDeAtaquesAgotadosException;
+import fiuba.algo3.modelo.excepciones.JugadorNoTieneUnAlgomonParaJugarError;
+import fiuba.algo3.modelo.excepciones.NoSePuedeAplicarUnElementoSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.modelo.excepciones.NoSePuedeAtacarConAlgomonSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.modelo.excepciones.NoSePuedeCambiarAlAlgomonSiNoEsElTurnoDelJugadorError;
+import fiuba.algo3.modelo.excepciones.NoSePuedenIngresarMasAlgomonesError;
+import fiuba.algo3.modelo.jugadores.Jugador;
+import fiuba.algo3.modelo.jugadores.JugadorPasivo;
 
 public class jugadorTest {
 
@@ -36,7 +37,7 @@ public class jugadorTest {
 		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		jugador.ingresarAlgomon(EspecieAlgomon.CHANSEY);
 		
-		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER, null);
 			
 	}
 	
@@ -49,7 +50,7 @@ public class jugadorTest {
 		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
 		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		
-		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER);
+		jugador.cambiarAlgomon(EspecieAlgomon.CHARMANDER, null);
 				
 	}
 	
@@ -62,7 +63,7 @@ public class jugadorTest {
 		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
 		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		
-		jugador.atacarConAlgomonActivo(NombreDelAtaque.ATAQUE_RAPIDO, new Jugador("juan"));
+		jugador.atacarConAlgomonActivo(NombreDelAtaque.ATAQUE_RAPIDO, new Jugador("juan"), null);
 				
 	}
 	
@@ -75,20 +76,10 @@ public class jugadorTest {
 		jugador.ingresarAlgomon(EspecieAlgomon.CHARMANDER);
 		jugador.ingresarAlgomon(EspecieAlgomon.BULBASOUR);
 		
-		jugador.aplicarElemento(TipoElemento.SUPERPOCION);
+		jugador.aplicarElemento(TipoElemento.SUPERPOCION, null);
 				
 	}
 	
-	@Test(expected = JugadorNoTieneUnAlgomonParaJugarError .class)
-	public void testJugadorNoTieneUnAlgomonParaJugarError () {
-			
-		Jugador jugador = new Jugador("pepe");
-		
-		jugador.esSuTurno();
-		
-		jugador.aplicarElemento(TipoElemento.SUPERPOCION);
-				
-	}
 	
 	
 	

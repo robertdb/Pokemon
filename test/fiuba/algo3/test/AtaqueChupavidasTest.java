@@ -6,17 +6,17 @@ import java.util.EnumMap;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.ataques.Ataque;
-import fiuba.algo3.algomones.ataques.AtaqueChupavidas;
-import fiuba.algo3.algomones.ataques.AtaqueSimple;
-import fiuba.algo3.algomones.ataques.NombreDelAtaque;
-import fiuba.algo3.algomones.tiposDeAlgomon.Tipo;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.Salud;
+import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaqueChupavidas;
+import fiuba.algo3.modelo.ataques.AtaqueSimple;
+import fiuba.algo3.modelo.ataques.NombreDelAtaque;
+import fiuba.algo3.modelo.tiposDeAlgomon.Tipo;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoPlanta;
 
 public class AtaqueChupavidasTest {
 

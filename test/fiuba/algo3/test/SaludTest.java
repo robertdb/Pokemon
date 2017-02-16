@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Salud;
+import fiuba.algo3.modelo.Salud;
 
 public class SaludTest {
 

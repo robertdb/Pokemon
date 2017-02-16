@@ -2,13 +2,14 @@ package fiuba.algo3.test;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.estadosDeAlgomon.ContextoEstado;
-import fiuba.algo3.algomones.estadosDeAlgomon.Dormido;
-import fiuba.algo3.algomones.estadosDeAlgomon.Quemado;
-import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoPlanta;
+
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.Salud;
+import fiuba.algo3.modelo.estadosDeAlgomon.ContextoEstado;
+import fiuba.algo3.modelo.estadosDeAlgomon.Dormido;
+import fiuba.algo3.modelo.estadosDeAlgomon.Quemado;
+import fiuba.algo3.modelo.excepciones.AtacarDormidoNoPuedeRealizarseException;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoPlanta;
 
 	public class ContextoEstadoTest {
 

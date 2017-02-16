@@ -6,16 +6,16 @@ import java.util.EnumMap;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.ataques.Ataque;
-import fiuba.algo3.algomones.ataques.AtaqueCanto;
-import fiuba.algo3.algomones.ataques.AtaqueSimple;
-import fiuba.algo3.algomones.ataques.NombreDelAtaque;
-import fiuba.algo3.algomones.excepciones.AtacarDormidoNoPuedeRealizarseException;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoFuego;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.Salud;
+import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaqueCanto;
+import fiuba.algo3.modelo.ataques.AtaqueSimple;
+import fiuba.algo3.modelo.ataques.NombreDelAtaque;
+import fiuba.algo3.modelo.excepciones.AtacarDormidoNoPuedeRealizarseException;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoFuego;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoNormal;
 
 public class AtaqueCantoTest {
 
@@ -23,6 +23,7 @@ public class AtaqueCantoTest {
 	public void testAtacarConCantoYelAtacadoNoPuedeAtacarDurante3Turnos() {
 		
 		//Se crea un algomon personalizado con fogonazo.
+		
 		Ataque canto = new AtaqueCanto(new AtaqueSimple(new TipoNormal(), 0, 4));
 		EnumMap<NombreDelAtaque, Ataque> ataques = new EnumMap<NombreDelAtaque, Ataque >(NombreDelAtaque.class);
 		ataques.put(NombreDelAtaque.CANTO,canto);

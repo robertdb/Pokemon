@@ -6,18 +6,18 @@ import java.util.EnumMap;
 
 import org.junit.Test;
 
-import fiuba.algo3.algomones.Algomon;
-import fiuba.algo3.algomones.Salud;
-import fiuba.algo3.algomones.ataques.Ataque;
-import fiuba.algo3.algomones.ataques.AtaqueSimple;
-import fiuba.algo3.algomones.ataques.NombreDelAtaque;
-import fiuba.algo3.algomones.elementos.Elemento;
-import fiuba.algo3.algomones.elementos.Pocion;
-import fiuba.algo3.algomones.elementos.SuperPocion;
-import fiuba.algo3.algomones.excepciones.PocionAgotadaException;
-import fiuba.algo3.algomones.excepciones.SuperPocionAgotadaException;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoAgua;
-import fiuba.algo3.algomones.tiposDeAlgomon.TipoNormal;
+import fiuba.algo3.modelo.Algomon;
+import fiuba.algo3.modelo.Salud;
+import fiuba.algo3.modelo.ataques.Ataque;
+import fiuba.algo3.modelo.ataques.AtaqueSimple;
+import fiuba.algo3.modelo.ataques.NombreDelAtaque;
+import fiuba.algo3.modelo.elementos.Elemento;
+import fiuba.algo3.modelo.elementos.Pocion;
+import fiuba.algo3.modelo.elementos.SuperPocion;
+import fiuba.algo3.modelo.excepciones.PocionAgotadaException;
+import fiuba.algo3.modelo.excepciones.SuperPocionAgotadaException;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoAgua;
+import fiuba.algo3.modelo.tiposDeAlgomon.TipoNormal;
 
 public class SuperPosionTest {
 
